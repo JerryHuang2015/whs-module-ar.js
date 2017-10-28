@@ -18,6 +18,68 @@
     "path": "^0.12.7",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.2.0",
-    "whs": "^2.0.0-beta.2"
+    "whs": "^2.0.0-beta.2",
+    "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "ar.js": "^1.0.0"
+  },
+  "name": "whs-module-ar.js",
+  "version": "0.1.0",
+  "description": "WHS module for AR.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhitestormJS/whs-module-ar.js.git"
+  },
+  "author": "Alexander Buzin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhitestormJS/whs-module-ar.js/issues"
+  },
+  "homepage": "https://github.com/WhitestormJS/whs-module-ar.js#readme",
+  "xo": {
+    "space": 2,
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser",
+      "es6"
+    ],
+    "syntax_map": {
+      "JavaScript (Babel)": "javascript"
+    },
+    "rules": {
+      "operator-linebreak": [
+        2,
+        "before"
+      ],
+      "curly": [
+        2,
+        "multi-or-nest"
+      ],
+      "one-var": 0,
+      "no-else-return": 1,
+      "no-undef": 0,
+      "no-new": 0,
+      "camelcase": 0,
+      "linebreak-style": 0,
+      "new-cap": [
+        1,
+        {
+          "newIsCap": true,
+          "capIsNew": true,
+          "properties": false
+        }
+      ],
+      "babel/arrow-parens": 0,
+      "xo/filename-case": 0,
+      "no-warning-comments": 0,
+      "unicorn/filename-case": 0,
+      "import/no-unassigned-import": 0,
+      "import/prefer-default-export": 0
+    }
   }
 }

@@ -3,27 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <script src="https://cdn.rawgit.com/WhitestormJS/whitestorm.js/beta/build/whitestorm.js"></script>
+    <script src="./js/artoolkit.min.js"></script>
     <script src="../build/ARJSModule.js"></script>
     <script type="text/javascript">
     const app = new WHS.App(
       new WHS.BasicAppPreset({
-        camera: {
-          position: {
-            z: 20,
-            y: 5
+        rendering: {
+          bgOpacity: 0,
+
+          renderer: {
+            alpha: true
           }
         }
       })
       .extend([
-        new WHS.controls.OrbitModule()
+        // new WHS.controls.OrbitModule(),
+        new ARJSModule({
+          patternUrl: './patt.hiro',
+          cameraParametersUrl: './camera_para.dat'
+        })
       ])
       .get()
     );
 
-    const sphere = new BasicSphere();
+    const sphere = new WHS.Sphere({
+      geometry: [1, 16, 16],
+      material: new THREE.MeshBasicMaterial({
+        color: 0xff0000
+      }),
+      position: [0, 0, -1]
+    });
+
     sphere.addTo(app);
     app.start();
 

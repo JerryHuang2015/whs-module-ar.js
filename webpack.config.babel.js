@@ -19,7 +19,7 @@ export default {
     path: path.join(__dirname, './build/'),
     filename: 'ARJSModule.js',
     libraryTarget: 'umd',
-    library: 'BasicSphere'
+    library: 'ARJSModule'
   },
   externals: {
     whs: 'WHS',
